@@ -5,11 +5,14 @@ public class DirCreator {
     private static final String ROJO = "\u001B[31m";
     private static final String RESET = "\u001B[0m";
 
+    public static final String PATH = "/home/gerry/awesometimes/learning/java/rmi_project/dirs";
+
     public DirCreator() {}
 
     public void new_dir(String[] dirname, String path) {
         if (path.isEmpty()) { // if path is empty use the default one
-            path = "/home/gerry/Documents/ceti/5sem/paralela/3Parcial/rmi_project/dirs";
+            // path = "/home/gerry/Documents/ceti/5sem/paralela/3Parcial/rmi_project/dirs";
+            path = PATH;
         }
         for (int i=0; i<dirname.length; i+=1) {
             File file = new File(path + "/" + dirname[i]);

@@ -74,8 +74,8 @@ public class client_impl extends UnicastRemoteObject implements client_iface, Ru
                             break;
                         case "delete":
                             DirCreator dc2 = new DirCreator();
-                            dc2.del_dir(new File("/home/gerry/Documents/ceti/5sem/paralela/3Parcial/rmi_project/dirs"));
-                            new File("/home/gerry/Documents/ceti/5sem/paralela/3Parcial/rmi_project/dirs").mkdir();
+                            dc2.del_dir(new File(DirCreator.PATH));
+                            new File(DirCreator.PATH).mkdir();
                             System.out.println("Default directory deleted and created again");
                             break;
                         default:

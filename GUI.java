@@ -50,8 +50,8 @@ public class GUI {
             dirname_input.setText("");
             path_input.setText("");
             DirCreator dc = new DirCreator();
-            dc.del_dir(new File("/home/gerry/Documents/ceti/5sem/paralela/3Parcial/rmi_project/dirs"));
-            new File("/home/gerry/Documents/ceti/5sem/paralela/3Parcial/rmi_project/dirs").mkdir();
+            dc.del_dir(new File(DirCreator.PATH));
+            new File(DirCreator.PATH).mkdir();
         });
 
         btn_secuential = custom_button(btn_secuential, "Normal");
