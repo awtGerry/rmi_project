@@ -16,10 +16,9 @@ public class DirCreator {
         for (int i=0; i<dirname.length; i+=1) {
             File file = new File(path + "/" + dirname[i]);
             if (file.mkdir() == true) {
-                System.out.println(VERDE + "Directorio " + dirname[i] + " creado en:" + path + RESET);
+                System.out.println(VERDE + "Directorio " + dirname[i] + " creado" + RESET);
             } else {
-                System.out.println(ROJO + "Error: No se pudo crear el directorio " + dirname[i] +
-                    " Asegurarse que la ruta exista o no haya un directorio con el mismo nombre." + RESET);
+                System.out.println(ROJO + "Error: No se pudo crear el directorio " + dirname[i] + RESET);
             }
         }
     }
