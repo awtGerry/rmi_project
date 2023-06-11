@@ -12,7 +12,7 @@ public class DirCreator {
     public void new_dir(String[] dirname, String path) {
         if (path.isEmpty()) { // if path is empty use the default one
             // path = "/home/gerry/Documents/ceti/5sem/paralela/3Parcial/rmi_project/dirs";
-            path = PATH;
+            path = "/home/gerry/awesometimes/learning/java/rmi_project/dirs";
         }
         for (int i=0; i<dirname.length; i+=1) {
             File file = new File(path + "/" + dirname[i]);
