@@ -3,8 +3,8 @@ import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 
 public class server_rmi {
-    public static final String HOST = "192.168.100.8";
-    // public static final String HOST = "192.168.100.109";
+    // public static final String HOST = "192.168.100.8";
+    public static final String HOST = "192.168.100.109";
     public static final int PORT = 1099;
     public static void main(String[] args) {
         try {
