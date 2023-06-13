@@ -10,7 +10,7 @@ public class ForkJoin extends RecursiveAction {
     private String[] dirname;
     private String path;
     private int start, end;
-    private final int limit = 3;
+    private final int limit = 6;
 
     public ForkJoin(String[] dirname, String path) {
         this.dirname = dirname;
