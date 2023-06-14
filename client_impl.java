@@ -51,7 +51,9 @@ public class client_impl extends UnicastRemoteObject implements client_iface, Ru
                             DirCreator dc = new DirCreator();
                             dc.new_dir(dirs, "");
                             end = System.currentTimeMillis();
-                            System.out.println("normal time: " + (end - start) + "ms");
+                            // System.out.println("normal time: " + (end - start) + "ms");
+                            server.send_message(name + ": normal time: " + (end - start) + "ms");
+
                             break;
                         case "fork":
                             ForkJoinPool pool = new ForkJoinPool();
@@ -61,7 +63,8 @@ public class client_impl extends UnicastRemoteObject implements client_iface, Ru
                             start = System.currentTimeMillis();
                             pool.invoke(fj);
                             end = System.currentTimeMillis();
-                            System.out.println("fork time: " + (end - start) + "ms");
+                            // System.out.println("fork time: " + (end - start) + "ms");
+                            server.send_message(name + ": fork time: " + (end - start) + "ms");
                             break;
                         case "executor":
                             ExecutorService executor = Executors.newFixedThreadPool(10);
@@ -70,7 +73,8 @@ public class client_impl extends UnicastRemoteObject implements client_iface, Ru
                             start = System.currentTimeMillis();
                             executor.execute(new ExecService(dirs, ""));
                             end = System.currentTimeMillis();
-                            System.out.println("executor time: " + (end - start) + "ms");
+                            // System.out.println("executor time: " + (end - start) + "ms");
+                            server.send_message(name + ": executor time: " + (end - start) + "ms");
                             break;
                         case "delete":
                             DirCreator dc2 = new DirCreator();
