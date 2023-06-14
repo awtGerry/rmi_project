@@ -16,11 +16,12 @@ public class DirCreator {
         for (int i=0; i<dirname.length; i+=1) {
             File file = new File(path + "/" + dirname[i]);
             if (file.mkdir() == true) {
-                System.out.println(VERDE + "Directorio " + dirname[i] + " creado" + RESET);
+                // System.out.println(VERDE + "Directorio " + dirname[i] + " creado" + RESET);
             } else {
-                System.out.println(ROJO + "Error: No se pudo crear el directorio " + dirname[i] + RESET);
+                // System.out.println(ROJO + "Error: No se pudo crear el directorio " + dirname[i] + RESET);
             }
         }
+        System.out.println(VERDE + "Directorios creados" + RESET);
     }
 
     public boolean del_dir(File filename) {
